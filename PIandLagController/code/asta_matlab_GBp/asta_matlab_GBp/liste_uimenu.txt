@@ -1,0 +1,65 @@
+%% Fenêtre temporelle
+% défini dans rt_trace
+Outils_t
+
+Superview   Etude : caractéristiques
+Leg         Légende 
+C_HT        Changer Horizon Temporel
+ZRT         Zoom
+[1 5] CB_M        Gestion des courbes
+
+%--------------------------
+M_Trace_t     Tracé de réponse
+
+M_Trace3    Boucle Ouverte : G(s)
+M_Trace1    Boucle Fermée : R(s)T(s)
+M_Trace2    Commande
+
+%--------------------------
+M_Edition_t
+
+M_Edition1
+M_Edition2
+M_Edition3
+M_Edition4
+
+%% Fenêtre fréquentielle
+% défini dans rf_trace
+
+Outils_f
+
+[1 1] Superview1  Etude1 : caractéristiques
+[1 2] Superview2  Etude2 : caractéristiques
+Leg         Légende  -> legendef
+C_HT        Changer intervalle de pulsations -> inputbox(22)
+ZRT         Zoom -> rf_zoom(1)
+[1 6] CB_M        Gestion des courbes
+[1 7] abak_M      Abaques de Nichols
+
+%--------------------------
+M_Trace_f     Tracé de réponse
+
+M_Trace1    Black de L(s)
+M_Trace2    Nyquist de L(s)
+M_Trace3    Bode de L(s)
+M_Trace4    Bode Gain de S(s)
+M_Trace5    Bode Gain de T(s)
+M_Trace6    Bode Gain de W(s)
+
+%--------------------------
+M_Edition_f
+
+M_Edition1
+M_Edition2
+M_Edition3
+M_Edition4
+
+%% Fenêtre principale
+% défini dans mprinc2.m
+
+RT glm([Menu_Principal,5,1]            Réponse temporelle 
+ 
+RF glm([Menu_Principal,5,2]            Réponse fréquentielle
+
+%%
+enlever les clipping dans les uimenu de abak et de cb_manager
